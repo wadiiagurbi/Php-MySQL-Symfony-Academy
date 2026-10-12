@@ -1,0 +1,12 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+# The json_login authenticator (see config/packages/security.yaml) intercepts this
+# path during the security phase of the request and never actually reaches a
+# controller, but Symfony's router still needs a route to match against.
+api_auth_login:
+    path: /api/auth/login
+    methods: [POST]
